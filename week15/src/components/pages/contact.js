@@ -1,6 +1,6 @@
 function Contact() {
   return (
-    <div>
+    <div className="my-3">
       <h1>Contact Us</h1>
       <ul className="border w-25 justify-content-center mx-auto">
         <li className="p-text">email: adventuretyme@gmail.com</li>

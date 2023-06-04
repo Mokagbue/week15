@@ -124,6 +124,11 @@ function CharacterList() {
           </div>
         ))}
       </div>
+      <img
+          src="https://i.imgur.com/AWDrJmG.png"
+          alt="banner home"
+          className="img-fluid my-3"
+        />
       <div className="d-flex flex-row mx-auto justify-content-center">
         <div className="m-3">
           <h1>Add A New Charater</h1>

@@ -250,7 +250,7 @@ const Game = () => {
   return (
     <section>
       <div>
-        <h1>Game Page</h1>
+        <h1>Adventure Tyme</h1>
         <div>
           <img
             src={characters.picture}
