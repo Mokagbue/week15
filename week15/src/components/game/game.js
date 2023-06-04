@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 
 const Game = () => {
   let { id } = useParams();
-  console.log("COW", id);
 
   const [characters, setCharacters] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -95,7 +94,7 @@ const Game = () => {
   const textNodes = [
     {
       id: 1,
-      text: "You wake up in a strange place and you see a jar of blue goo near you.",
+      text: "You are walking home after a long day of work. As you follow the path the sudden barking of a dog startles you, causing you to trip. As you brush yourself off you notice a jar of blue goo half buried under a bush near you.",
       options: [
         {
           text: "Take the goo",
@@ -110,7 +109,7 @@ const Game = () => {
     },
     {
       id: 2,
-      text: "You venture forth in search of answers to where you are when you come across a merchant.",
+      text: "You venture forth in search of answers to why the dog started barking, when you come across a shifty looking merchant. They twirl their mustaches in their fingers as they beacon you over with a toothy grin",
       options: [
         {
           text: "Trade the goo for a sword",
@@ -125,21 +124,21 @@ const Game = () => {
           nextText: 3,
         },
         {
-          text: "Ignore the merchant",
+          text: "Ignore the merchant; way to sus...",
           nextText: 3,
         },
       ],
     },
     {
       id: 3,
-      text: "After leaving the merchant you start to feel tired and stumble upon a small town next to a dangerous looking castle.",
+      text: "After leaving the merchant you start to feel tired and stumble upon a small town next to a dangerous looking castle. Devilish bats and thundering lightning halo its deterring turrents.",
       options: [
         {
           text: "Explore the castle",
           nextText: 4,
         },
         {
-          text: "Find a room to sleep at in the town",
+          text: "Find a room to sleep in the town",
           nextText: 5,
         },
         {
@@ -170,7 +169,7 @@ const Game = () => {
     },
     {
       id: 6,
-      text: "You wake up well rested and full of energy ready to explore the nearby castle.",
+      text: "You wake up, and after a hot mug of coffee, you feel full of energy absolutely ready to explore the nearby castle. Heck Yeah!",
       options: [
         {
           text: "Explore the castle",
@@ -235,7 +234,7 @@ const Game = () => {
     },
     {
       id: 11,
-      text: "You threw your jar of goo at the monster and it exploded. After the dust settled you saw the monster was destroyed. Seeing your victory you decide to claim this castle as your and live out the rest of your days there.",
+      text: "You threw your jar of goo at the monster and it explodes! You are covered in monster bits, but you are alive! Savoring your victory you decide to claim this castle as your own and live out the rest of your days there.",
       options: [
         {
           text: "Congratulations. Play Again.",

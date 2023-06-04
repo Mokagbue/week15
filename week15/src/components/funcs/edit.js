@@ -56,54 +56,55 @@ function EditChar() {
 
   return (
     <div className="col-sm-6 mx-auto">
-      <h3>Edit Character</h3>
+      <h1>Edit Character</h1>
       <form
         onSubmit={handleSubmit}
         className="d-flex flex-column mx-auto w-70 m-2 border"
       >
-        <label>Name</label>
+        <label className="d-flex flex-start mx-2">Name</label>
         <input
           placeholder="name"
           name="name"
           value={name}
           onChange={e => setName(e.target.value)}
         />
-        <label>Class</label>
+        <label className="d-flex flex-start mx-2">Class</label>
         <input
           placeholder="class"
           name="class"
           value={role}
           onChange={e => setRole(e.target.value)}
         />
-        <label>Weapon</label>
+        <label className="d-flex flex-start mx-2">Weapon</label>
         <input
           placeholder="weapon"
           name="weapon"
           value={weapon}
           onChange={e => setWeapon(e.target.value)}
         />
-        <label>Power Up</label>
+        <label className="d-flex flex-start mx-2">Power Up</label>
         <input
           placeholder="powerup"
           name="powerup"
           value={powerup}
           onChange={e => setPowerup(e.target.value)}
         />
-        <label>Weakness</label>
+        <label className="d-flex flex-start mx-2">Weakness</label>
         <input
           placeholder="weakness"
           name="weakness"
           value={weakness}
           onChange={e => setWeakness(e.target.value)}
         />
-        <label>Picture URL</label>
+        <label className="d-flex flex-start mx-2">Picture URL</label>
         <input
           placeholder="picture"
           name="picture"
           value={picture}
           onChange={e => setPicture(e.target.value)}
         />
-        <button onSubmit={handleSubmit}>Submit</button>
+        <button onSubmit={handleSubmit}className="btn btn-primary m-2"
+              style={{ width: "150px" }}>Submit</button>
       </form>
     </div>
   );

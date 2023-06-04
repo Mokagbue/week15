@@ -18,7 +18,7 @@ function About() {
       <div className="d-flex justify-content-center mx-auto flex-column">
         <div className="d-flex flex-row border justify-content-center mx-auto col-5">
           <p className="p-text d-flex align-items-center">
-            As a player you can choose between 3 pre-built chracters or create
+            As a player you can choose between 3 pre-built characters or create
             your own character!
           </p>
           <img
@@ -34,13 +34,13 @@ function About() {
             style={{ width: 298, height: 298 }}
           />
           <p className="p-text d-flex align-items-center">
-            As a player you can choose between 3 pre-built chracters or create
+            As a player you can choose between 3 pre-built characters or create
             your own character!
           </p>
         </div>
         <div className="d-flex flex-row justify-content-center mx-auto col-5 border">
           <p className="p-text d-flex align-items-center">
-            As a player you can choose between 3 pre-built chracters or create
+            As a player you can choose between 3 pre-built characters or create
             your own character!
           </p>
           <img
