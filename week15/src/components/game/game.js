@@ -14,7 +14,7 @@ const Game = () => {
     setGameText(gameText === "black" ? "#000000" : "#ffffff");
   };
 
-  const call = "https://adventure-tyme.herokuapp.com/characters/";
+  const call = "https://adventure-tyme.onrender.com/characters/";
 
   const fetchData = async () => {
     const results = await fetch(call + id);
@@ -97,7 +97,7 @@ const Game = () => {
       text: "You are walking home after a long day of work. As you follow the path the sudden barking of a dog startles you, causing you to trip. As you brush yourself off you notice a jar of blue goo half buried under a bush near you.",
       options: [
         {
-          text: "Take the goo",
+          text: `${characters.name} takes the goo`,
           setState: { blueGoo: true },
           nextText: 2,
         },

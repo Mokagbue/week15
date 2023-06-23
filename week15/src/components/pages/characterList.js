@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 function CharacterList() {
   const [characters, setCharacters] = useState([]);
+  const [rolledStat, setRolledStat] = useState([]);
   const [newChar, setNewChar] = useState({
     name: "",
     role: "",
@@ -10,11 +11,12 @@ function CharacterList() {
     powerup: "",
     weaknes: "",
     picture: "",
+    rolledStat: rolledStat
   });
   const [idGrab, setIdGrab] = useState(0);
   const [loading, setLoading] = useState(true);
 
-  const call = "https://adventure-tyme.herokuapp.com/characters";
+  const call = "https://adventure-tyme.onrender.com/characters";
 
   const fetchData = async () => {
     const results = await fetch(call);
@@ -72,6 +74,14 @@ function CharacterList() {
       });
   };
 
+  const handleRollingStat = (event) => {
+    event.preventDefault();
+    let strength = Math.floor(Math.random()*(20 - 1) + 1);
+    let defense = Math.floor(Math.random()*(20 - 1) + 1);
+    let charm = Math.floor(Math.random()*(20 - 1) + 1);
+    setRolledStat([strength, defense, charm]);
+  };
+
   useEffect(() => {
     fetchData();
     setLoading(false);
@@ -103,6 +113,13 @@ function CharacterList() {
                   This character enjoys {characters.powerup}, but hates{" "}
                   {characters.weakness}.
                 </p>
+                <div><h5>Character Stats</h5>
+                {/* <div>
+                  <p className="p-text">Strength: {characters.rolledStat[0]}</p>
+                  <p className="p-text">Defense: {characters.rolledStat[1]}</p>
+                  <p className="p-text">Charm: {characters.rolledStat[2]}</p>
+                </div> */}
+                </div>
                 <Link to={`${characters.id}`} className="btn btn-primary">
                   Game Start
                 </Link>
@@ -125,10 +142,10 @@ function CharacterList() {
         ))}
       </div>
       <img
-          src="https://i.imgur.com/AWDrJmG.png"
-          alt="banner home"
-          className="img-fluid my-3"
-        />
+        src="https://i.imgur.com/AWDrJmG.png"
+        alt="banner home"
+        className="img-fluid my-3"
+      />
       <div className="d-flex flex-row mx-auto justify-content-center">
         <div className="m-3">
           <h1>Add A New Charater</h1>
@@ -178,6 +195,23 @@ function CharacterList() {
               value={newChar.picture || "https://i.imgur.com/NgLWaqd.png"}
               onChange={handleInput}
             />
+            <div>
+              <p>Roll Stats</p>
+              <button onClick={handleRollingStat}> Roll</button>
+              <div>
+                <label className="d-flex flex-start mx-2">Strength</label>
+                <p className="p-text">{rolledStat[0]}</p>
+              </div>
+              <div>
+                <label className="d-flex flex-start mx-2">Defense</label>
+                <p className="p-text">{rolledStat[1]}</p>
+              </div>
+              <div>
+                <label className="d-flex flex-start mx-2">Charm</label>
+                <p className="p-text">{rolledStat[2]}</p>
+              </div>
+            </div>
+
             <button
               onSubmit={handleSubmit}
               className="btn btn-primary m-2"
